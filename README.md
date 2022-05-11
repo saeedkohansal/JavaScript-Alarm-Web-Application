@@ -1,2 +1,2 @@
 # JavaScript-Alarm-Web-Application
-SOON
+soon
