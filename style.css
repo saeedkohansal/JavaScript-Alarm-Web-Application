@@ -1,0 +1,264 @@
+body {
+    font-family: "Francois One";
+    color: #fff;
+    background-color: #72c4ef;
+    background-image: url("https://wallpaperaccess.com/full/388350.png");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    color: #fff;
+}
+
+input,
+select {
+    font-family: "Francois One";
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 32px;
+    padding: 0;
+    margin: 0 0 0 12px;
+}
+
+.container {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notification {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: #fff;
+    background-color: #0006;
+    border-radius: 0 0 20px 0;
+    padding: 0 10px;
+    z-index: 100;
+    transition: 300ms;
+}
+
+.notification:hover {
+    margin-left: 10px;
+    transform: scale(1.1);
+}
+
+.app-title {
+    position: absolute;
+    top: 4px;
+}
+
+.alarm-active,
+.alarm-add-new {
+    background-color: #0006;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.alarm-active h1,
+.alarm-add-new h1 {
+    display: inline-block;
+    width: 256px;
+    text-align: center;
+}
+
+.alarm-add-new h1 {
+    width: 500px;
+}
+
+.alarm-delete {
+    color: #ff4040;
+    background-color: #0006;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 600ms;
+}
+
+.alarm-delete:hover {
+    color: #fff;
+    background-color: #ff4040;
+}
+
+.alarm-add {
+    color: #fff;
+    background-color: #0006;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 600ms;
+}
+
+.alarm-add:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#alarm-hours,
+#alarm-minutes {
+    width: 80px;
+    text-align: center;
+    background-color: #0006;
+    border-radius: 50px;
+    margin: 0;
+    padding: 0;
+    transition: 1s;
+}
+
+#alarm-hours:focus,
+#alarm-minutes:focus {
+    color: #000;
+    background-color: #ff0;
+}
+
+#alarm-title {
+    border: 2px solid;
+    border-radius: 50px;
+    padding: 4px 20px;
+    width: 400px;
+    transition: 1s;
+}
+
+#alarm-title:focus {
+    border-color: #ff0;
+}
+
+.alarm-active,
+.alarm-add-new {
+    display: none;
+}
+
+.fullscreen-alarm {
+    display: none;
+    background-color: #ffffffe3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.fullscreen-alarm h1 {
+    text-align: center;
+    font-size: 128px;
+    color: #ff7700;
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alarm-stop {
+    display: block;
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ff4040;
+    width: 230px;
+    margin: 100px auto auto;
+    border-radius: 100px;
+    border: 3px solid transparent;
+    text-align: center;
+    transition: 1s;
+}
+
+.alarm-stop:hover {
+    color: #ff4040;
+    background-color: transparent;
+    border-color: #666;
+    transform: scale(1.1);
+}
+
+.bi-bell-fill {
+    display: inline-block;
+    color: #444;
+}
+
+.bell-animation {
+    -webkit-animation: bell-animation 2.8s infinite both;
+    animation: bell-animation 2.8s infinite both;
+}
+
+@-webkit-keyframes bell-animation {
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(6deg);
+        transform: translateX(-30px) rotate(6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(-6deg);
+        transform: translateX(15px) rotate(-6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(3.6deg);
+        transform: translateX(-15px) rotate(3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(-2.4deg);
+        transform: translateX(9px) rotate(-2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(1.2deg);
+        transform: translateX(-6px) rotate(1.2deg);
+    }
+}
+
+@keyframes bell-animation {
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(6deg);
+        transform: translateX(-30px) rotate(6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(-6deg);
+        transform: translateX(15px) rotate(-6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(3.6deg);
+        transform: translateX(-15px) rotate(3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(-2.4deg);
+        transform: translateX(9px) rotate(-2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(1.2deg);
+        transform: translateX(-6px) rotate(1.2deg);
+    }
+}
